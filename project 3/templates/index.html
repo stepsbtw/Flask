@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+    <h1>Registre-se no Site</h1>
+    <form action="/registro" method="post"> <!--usando post a privacidade é mantida, nao fica no url-->
+        <input name="nome" placeholder="Nome" type="text">
+        <select name="ensino">
+            <option disabled selected value="">Nível de Ensino</option>
+            <option value="FUND1">Ensino fundamental 1</option>
+            <option value="FUND2">Ensino fundamental 2</option>
+            <option value="MEDIO">Ensino médio</option>
+            <option value="SUPERIOR">Ensino superior</option>
+        </select>
+        <input type="submit" value="Registro">
+    </form>
+{% endblock %}
